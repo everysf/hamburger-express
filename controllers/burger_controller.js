@@ -14,8 +14,10 @@ module.exports = function(app) {
     });
 
     app.post("/api/add-burger", function(req, res) { 
-      var dbQuery = "INSERT INTO burgers (burger_name) VALUES (?)";
-  
+      // var dbQuery = "INSERT INTO burgers (burger_name) VALUES ('";
+
+      console.log(req)
+
       connection.query(dbQuery, function(err, res) {
         if (err) throw err;
         console.log("Burger saved");
