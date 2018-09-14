@@ -1,4 +1,4 @@
-alert("connected")
+var orm = require("./../../../config/orm.js");
 
 $(document).ready(function(){
     
@@ -21,8 +21,6 @@ $(document).ready(function(){
     $(".add_burger").on("submit", function(event){
 
         event.preventDefault()
-
-        alert("Add")
         
         var newBurger = {
             name: $("#new_burger").val().trim(),
